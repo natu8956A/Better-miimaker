@@ -11,16 +11,16 @@
 
 #include "buttons.h"
 
-WUPS_PLUGIN_NAME("Better Settings");
+WUPS_PLUGIN_NAME("Better MII_MAKER");
 WUPS_PLUGIN_DESCRIPTION("An aroma plugin that improves the System Settings user experience!");
-WUPS_PLUGIN_VERSION("v1.1");
-WUPS_PLUGIN_AUTHOR("Fangal");
+WUPS_PLUGIN_VERSION("v1.0");
+WUPS_PLUGIN_AUTHOR("natu8956A");
 WUPS_PLUGIN_LICENSE("GPLv3");
 
 #define MIRROR_SCREENS_CONFIG_ID "mirrorScreens"
 #define INPUT_REDIRECTION_CONFIG_ID "inputRedirection"
 
-WUPS_USE_STORAGE("Better_Settings");
+WUPS_USE_STORAGE("Better_MII_MAKER");
 
 bool mirrorScreens = true;
 bool inputRedirection = true;
@@ -31,9 +31,9 @@ uint64_t currentTID = 0;
 
 INITIALIZE_PLUGIN() {
     WHBLogUdpInit();
-    WHBLogPrintf("Hola from Better Settings!");
+    WHBLogPrintf("Hola from Better MII_MAKER!");
 
-    sysTID = _SYSGetSystemApplicationTitleId(SYSTEM_APP_ID_SYSTEM_SETTINGS);
+    sysTID = _SYSGetSystemApplicationTitleId(SYSTEM_APP_ID_MII_MAKER);
 
     WUPS_OpenStorage();
     WUPS_GetBool(NULL, MIRROR_SCREENS_CONFIG_ID, &mirrorScreens);
